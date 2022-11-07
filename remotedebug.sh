@@ -1,0 +1,1 @@
+java -Dspring.profiles.active=dev -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9080 -jar target/gateway-*.jar

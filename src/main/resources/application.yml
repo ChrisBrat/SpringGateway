@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: path_route
+        uri: http://localhost:8081/message
+        predicates:
+        - Query=english
+      - id: nl_path_route
+        uri: http://localhost:8082/message
+        predicates:
+        - Query=dutch
